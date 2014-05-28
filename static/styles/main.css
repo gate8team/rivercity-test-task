@@ -1,0 +1,38 @@
+@import "normalize.css";
+@import "opensans-regular.css";
+@import "common.css";
+
+html, body {font-family: 'OpenSansRegular', Arial, sans-serif; font-size: 16px; color: #0b0b0b;}
+
+a {text-decoration: none; color: #2e3192; border-bottom: 1px solid #2e3192; border-bottom: 1px solid rgba(46, 49, 146, 0.4);}
+    a:hover {text-decoration: none; color: #d40000; border-bottom: 1px solid #d40000; border-bottom: 1px solid rgba(212, 0, 0, 0.4);}
+
+ul {margin: 0; padding: 0; list-style: none;}
+
+.wrapper {width: 980px; margin: 0 auto; padding: 0 10px;}
+
+.header {padding: 40px 0 40px 0;}
+    .header__menu {font-size: 14px;}
+        .header__menu ul {list-style: none; margin: 0; padding: 0 0 20px 0;}
+            .header__menu ul li {display: inline-block; padding: 0 30px 0 0;}
+                .header__menu ul li:last-child {padding: 0 0 0 0;}
+
+.main {}
+    .main ul li:before {content: '- ';}
+    .main__inner {}
+        .main__inner__article {width: 600px;}
+            .main__inner__article__title {margin: 0 0 30px 0; padding: 0; font-size: 36px;}
+            .main__inner__article__content {line-height: 26px;}
+        .main__inner__chat {width: 340px; margin: 8px 0 0 0;}
+            .main__inner__chat.-bordered {border: 2px solid #2e3192;}
+                .main__inner__chat__message_list {padding: 0 15px;}
+                    .main__inner__chat__message_list__item {}
+                .main__inner__chat__message_form {padding: 0 10px;}
+                    .main__inner__chat__message_form.-blue {color: #fff; background: #2e3192;}
+
+.footer {padding: 20px 0 20px 0;}
+    .footer__inner {}
+        .footer__inner__menu {font-size: 14px;}
+            .footer__inner__menu ul {list-style: none; margin: 0; padding: 0;}
+                .footer__inner__menu ul li {display: inline-block; padding: 0 55px 0 0;}
+                    .footer__inner__menu ul li:last-child {padding: 0 0 0 0;}
