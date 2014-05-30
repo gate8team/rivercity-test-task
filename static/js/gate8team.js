@@ -9,19 +9,32 @@ if(typeof String.prototype.trim !== 'function') {
 
 $(document).ready(function(){
     var simpleMessenger = new SimpleMessenger();
+    var scrollHeight = 250, scrollPadding = 15;
 
     $('.main__inner__chat__message_list').slimScroll({
-        height: '250px'
-    });
+        height: scrollHeight + 'px'
+    }).bind('slimscroll', function(e, pos){
+            if (pos === 'bottom')
+                $('.main__inner__chat__message_list__wrapper__dots').fadeOut(200);
+    });;
 
     $('.app').on('newMessageCame', function(e, message) {
         if (message instanceof SimpleMessage) {
             simpleMessenger.addMessage(message);
             $('.main__inner__chat__message_list').append(getNewMessages(simpleMessenger));
+
+            var scrollH = $('.main__inner__chat__message_list')[0].scrollHeight,
+                scrollTop = $('.main__inner__chat__message_list').scrollTop();
+
+            if (scrollH > (scrollHeight + 15) && scrollH > scrollTop) {
+                $('.main__inner__chat__message_list__wrapper__dots').fadeIn(200);
+            } else {
+                $('.main__inner__chat__message_list__wrapper__dots').fadeOut(200);
+            }
         }
     });
 
-    startFaking(7000, 'Илья', ['Привет', 'Да норм.', 'А я тебя люблю, штурмовик...']);
+    startFaking(7000, 'Илья', ['Требуется сверстать эту страницу. Справа находится чат, который работает по следующему принципу: сообщения от Ильи и Стаса приходят с некоторой переодичностью (текст и частота не важны). Пользователь может отправить форму, и его сообщение появится в чате как показано справа. Серверную часть реализовывать на нужно.', 'Привет', 'Да норм.', 'А я тебя люблю, штурмовик...']);
     startFaking(4000, 'Стас', ['Привет', 'Как ты?', 'Я тебя ненавижу']);
 
     $('.main__inner__chat__message_form__form').submit(function(e){

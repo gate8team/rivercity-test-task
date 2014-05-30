@@ -25,8 +25,12 @@ ul {margin: 0; padding: 0; list-style: none;}
             .main__inner__article__content {line-height: 26px;}
         .main__inner__chat {width: 340px; margin: 0 0 0 0;}
             .main__inner__chat.-bordered {border: 2px solid #2e3192;}
-            .main__inner__chat__message_list__wrapper {padding: 0px 0px;}
+            .main__inner__chat__message_list__wrapper {padding: 0 0 10px 0;}
                 .main__inner__chat__message_list__wrapper.-relative {position: relative;}
+                .main__inner__chat__message_list__wrapper__dots {position: absolute; bottom: 0; left: auto; width: 100%; height: 20px; line-height: 20px; display: none; text-align: center;}
+                    .main__inner__chat__message_list__wrapper__dots ul {list-style: none; margin: 0; padding: 0;}
+                        .main__inner__chat__message_list__wrapper__dots ul li {display: inline-block; background: #2e3192; height: 5px; width: 5px; margin: 0 1px;}
+                            .main__inner__chat__message_list__wrapper__dots ul li:before {content: '';}
                 .main__inner__chat__message_list {padding: 0 15px;}
                     .main__inner__chat__message_list__item {margin: 15px 0; position: relative;}
                         .main__inner__chat__message_list__item + .main__inner__chat__message_list__item {margin-top: 0px;}
