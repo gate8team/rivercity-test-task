@@ -38,19 +38,44 @@
                 </div>
             </div>
             <div class="main__inner__chat -bordered col -right">
-                <div class="main__inner__chat__message_list">
-                    <div class="main__inner__chat__message_list__item">
-                        Сообщение 1
-                    </div>
-                    <div class="main__inner__chat__message_list__item">
-                        Сообщение 2
-                    </div>
-                    <div class="main__inner__chat__message_list__item">
-                        Сообщение 3
+                <div class="main__inner__chat__message_list__wrapper -relative">
+                    <div class="main__inner__chat__message_list">
+                        <div class="main__inner__chat__message_list__item -income">
+                            <div class="main__inner__chat__message_list__item__user-name">Стас Иванов:</div>
+                            <div class="main__inner__chat__message_list__item__user-message -rounded">Отличная статья! Побольше бы таких!! Посоветуйте еще че почитать????</div>
+                        </div>
+                        <div class="main__inner__chat__message_list__item -outcome">
+                            <div class="main__inner__chat__message_list__item__user-name">Вы:</div>
+                            <div class="main__inner__chat__message_list__item__user-message -rounded">Отличная статья! Побольше бы таких!! Посоветуйте еще че почитать????</div>
+                        </div>
+                        <div class="main__inner__chat__message_list__item -income">
+                            <div class="main__inner__chat__message_list__item__user-name">Стас Иванов:</div>
+                            <div class="main__inner__chat__message_list__item__user-message -rounded">Отличная статья! Побольше бы таких!! Посоветуйте еще че почитать????</div>
+                        </div>
+                        <div class="main__inner__chat__message_list__item -outcome">
+                            <div class="main__inner__chat__message_list__item__user-name">Вы:</div>
+                            <div class="main__inner__chat__message_list__item__user-message -rounded">Отличная статья!</div>
+                        </div>
+                        <div class="main__inner__chat__message_list__item -income">
+                            <div class="main__inner__chat__message_list__item__user-name">Стас Иванов:</div>
+                            <div class="main__inner__chat__message_list__item__user-message -rounded">Отличная статья!</div>
+                        </div>
                     </div>
                 </div>
                 <div class="main__inner__chat__message_form -blue">
-                    Тут будет форма
+                    <form class="main__inner__chat__message_form__form">
+                        <div class="main__inner__chat__message_form__form__control">
+                            <label class="main__inner__chat__message_form__form__control__label" for="userName">Имя</label>
+                            <input class="main__inner__chat__message_form__form__control__input -rounded -change_box_model" id="userName" type="text">
+                        </div>
+                        <div class="main__inner__chat__message_form__form__control -change_box_model">
+                            <label class="main__inner__chat__message_form__form__control__label" for="userMessage">Текст сообщения</label>
+                            <textarea class="main__inner__chat__message_form__form__control__input -rounded -textarea -change_box_model" id="userMessage"></textarea>
+                        </div>
+                        <div class="main__inner__chat__message_form__form__control -change_box_model">
+                            <input class="main__inner__chat__message_form__form__control__submit -rounded -change_box_model" type="submit" value="Отправить">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -66,5 +91,8 @@
             </div>
         </div>
     </footer>
+    <script src="./static/js/jquery-1.11.1.min.js"></script>
+    <script src="./static/js/jquery.slimscroll.min.js"></script>
+    <script src="./static/js/gate8team.js"></script>
 </body>
 </html>

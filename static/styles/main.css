@@ -23,12 +23,32 @@ ul {margin: 0; padding: 0; list-style: none;}
         .main__inner__article {width: 600px;}
             .main__inner__article__title {margin: 0 0 30px 0; padding: 0; font-size: 36px;}
             .main__inner__article__content {line-height: 26px;}
-        .main__inner__chat {width: 340px; margin: 10px 0 0 0;}
+        .main__inner__chat {width: 340px; margin: 0 0 0 0;}
             .main__inner__chat.-bordered {border: 2px solid #2e3192;}
+            .main__inner__chat__message_list__wrapper {padding: 20px 0px;}
+                .main__inner__chat__message_list__wrapper.-relative {position: relative;}
                 .main__inner__chat__message_list {padding: 0 15px;}
                     .main__inner__chat__message_list__item {}
-                .main__inner__chat__message_form {padding: 0 10px;}
+                        .main__inner__chat__message_list__item + .main__inner__chat__message_list__item {margin-top: 15px;}
+                            .main__inner__chat__message_list__item__user-name {}
+                            .main__inner__chat__message_list__item__user-message {border: 1px solid #0b0b0b; padding: 5px 9px; position: relative;}
+                            .main__inner__chat__message_list__item__user-message.-rounded {-webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+                        .main__inner__chat__message_list__item.-income {}
+                        .main__inner__chat__message_list__item.-outcome {}
+                            .main__inner__chat__message_list__item.-outcome .main__inner__chat__message_list__item__user-name {text-align: right;}
+                            .main__inner__chat__message_list__item.-outcome .main__inner__chat__message_list__item__user-message {background: #2e3192; border: 1px solid #2e3192; color: #fff;}
+                .main__inner__chat__message_form {padding: 20px 10px;}
                     .main__inner__chat__message_form.-blue {color: #fff; background: #2e3192;}
+                        .main__inner__chat__message_form__form {}
+                            .main__inner__chat__message_form__form__control {}
+                                .main__inner__chat__message_form__form__control + .main__inner__chat__message_form__form__control {margin-top: 20px;}
+                                .main__inner__chat__message_form__form__control__input {border: 1px solid #585aa8; color: #585aa8; width: 100%; padding: 2px 5px; font-size: 13px;}
+                                    .main__inner__chat__message_form__form__control__input.-textarea {min-height: 100px; max-height: 100px; min-width: 100%; max-width: 100%;}
+                                    .main__inner__chat__message_form__form__control__input.-rounded {-webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+                                .main__inner__chat__message_form__form__control__label {display: block; padding: 0 0 5px 0; font-size: 14px;}
+                                .main__inner__chat__message_form__form__control__submit {background: #2e3192; border: 2px solid #585aa8; color: #585aa8; width: 100%; padding: 7px 5px;}
+                                    .main__inner__chat__message_form__form__control__submit:hover {cursor: pointer; color: #fff; border: 2px solid #fff;}
+                                    .main__inner__chat__message_form__form__control__submit.-rounded {-webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
 
 .footer {padding: 20px 0 20px 0;}
     .footer__inner {}

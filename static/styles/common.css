@@ -1,3 +1,7 @@
+.-change_box_model,
+.-change_box_model:before,
+.-change_box_model:after {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+
 .row {}
     .row:before, .row:after {content:' '; display:table;}
     .row:after {clear:both;}
