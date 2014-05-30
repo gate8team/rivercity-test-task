@@ -36,8 +36,10 @@ ul {margin: 0; padding: 0; list-style: none;}
                                 .main__inner__chat__message_list__item__user-message:before {}
                                     .main__inner__chat__message_list__item__user-message.-arrowed:before {content: ''; border: 10px solid transparent; border-bottom: 10px solid #9a9a9a; position: absolute; top: -20px; left: 9px;}
                                     .main__inner__chat__message_list__item__user-message.-arrowed:after {content: ''; border: 9px solid transparent; border-bottom: 9px solid #fff; position: absolute; top: -18px; left: 10px;}
+                                    .main__inner__chat__message_list__item__user-message.-imaged:before {content: ''; background: url(../i/arrow--gray.gif) #fff -2px 0px no-repeat; height: 13px; width: 20px; position: absolute; top: -13px; left: 9px;}
                                     .main__inner__chat__message_list__item.-outcome .main__inner__chat__message_list__item__user-message.-arrowed:after {content: ''; border: 9px solid transparent; border-bottom: 9px solid #2e3192; position: absolute; top: -18px; left: 280px;}
                                     .main__inner__chat__message_list__item.-outcome .main__inner__chat__message_list__item__user-message.-arrowed:before {content: ''; border: 10px solid transparent; border-bottom: 10px solid #2e3192; position: absolute; top: -20px; left: 280px;}
+                                    .main__inner__chat__message_list__item.-outcome .main__inner__chat__message_list__item__user-message.-imaged:before {content: ''; background: url(../i/arrow--blue.gif) no-repeat; position: absolute; top: -15px; left: 278px; height: 15px; width: 29px;}
                         .main__inner__chat__message_list__item.-income {}
                         .main__inner__chat__message_list__item.-outcome {}
                             .main__inner__chat__message_list__item.-outcome .main__inner__chat__message_list__item__user-name {text-align: right;}

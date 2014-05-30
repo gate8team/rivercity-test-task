@@ -1,5 +1,12 @@
 'use strict';
 
+// IE8 fix
+if(typeof String.prototype.trim !== 'function') {
+    String.prototype.trim = function() {
+        return this.replace(/^\s+|\s+$/g, '');
+    }
+}
+
 $(document).ready(function(){
     var simpleMessenger = new SimpleMessenger();
 
@@ -18,13 +25,19 @@ $(document).ready(function(){
     startFaking(4000, 'Стас', ['Привет', 'Как ты?', 'Я тебя ненавижу']);
 
     $('.main__inner__chat__message_form__form').submit(function(e){
-        var userName = $('#userName').val(),
-            userMessage = $('#userMessage').val(),
+        var userName = $('#userName').val().trim(),
+            userMessage = $('#userMessage').val().trim(),
             newMessage = new SimpleMessage(userName, userMessage, false);
 
+        if (userName && userMessage){
+            $('.app').trigger('newMessageCame', newMessage);
+            $('#userMessage').val('').focus();
+        } else {
+            alert('Введите имя и сообщение!');
+            $('#userName').focus();
+        }
+
         e.preventDefault();
-        $('.app').trigger('newMessageCame', newMessage);
-        $('#userMessage').val('').focus();
     });
 });
 
@@ -42,7 +55,7 @@ function getNewMessages(messenger){
     var elementsToRender = [];
     var template = '<div class="main__inner__chat__message_list__item {message-type}">' +
                     '<div class="main__inner__chat__message_list__item__user-name">{user-name}:</div>' +
-                    '<div class="main__inner__chat__message_list__item__user-message -rounded -arrowed">{user-message}</div>' +
+                    '<div class="main__inner__chat__message_list__item__user-message -rounded -imaged">{user-message}</div>' +
                     '</div>';
 
     for (var i = 0; i < messenger.messageList.length; i++){
