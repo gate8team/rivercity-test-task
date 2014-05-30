@@ -42,7 +42,7 @@ function getNewMessages(messenger){
     var elementsToRender = [];
     var template = '<div class="main__inner__chat__message_list__item {message-type}">' +
                     '<div class="main__inner__chat__message_list__item__user-name">{user-name}:</div>' +
-                    '<div class="main__inner__chat__message_list__item__user-message -rounded">{user-message}</div>' +
+                    '<div class="main__inner__chat__message_list__item__user-message -rounded -arrowed">{user-message}</div>' +
                     '</div>';
 
     for (var i = 0; i < messenger.messageList.length; i++){
