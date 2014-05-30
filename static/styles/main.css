@@ -25,9 +25,9 @@ ul {margin: 0; padding: 0; list-style: none;}
             .main__inner__article__content {line-height: 26px;}
         .main__inner__chat {width: 340px; margin: 0 0 0 0;}
             .main__inner__chat.-bordered {border: 2px solid #2e3192;}
-            .main__inner__chat__message_list__wrapper {padding: 0 0 10px 0;}
+            .main__inner__chat__message_list__wrapper {padding: 0 0 20px 0;}
                 .main__inner__chat__message_list__wrapper.-relative {position: relative;}
-                .main__inner__chat__message_list__wrapper__dots {position: absolute; bottom: 0; left: auto; width: 100%; height: 20px; line-height: 20px; display: none; text-align: center;}
+                .main__inner__chat__message_list__wrapper__dots {position: absolute; bottom: 7px; left: auto; width: 100%; height: 20px; line-height: 20px; display: none; text-align: center;}
                     .main__inner__chat__message_list__wrapper__dots ul {list-style: none; margin: 0; padding: 0;}
                         .main__inner__chat__message_list__wrapper__dots ul li {display: inline-block; background: #2e3192; height: 5px; width: 5px; margin: 0 1px;}
                             .main__inner__chat__message_list__wrapper__dots ul li.-rounded {-webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;}
@@ -36,7 +36,7 @@ ul {margin: 0; padding: 0; list-style: none;}
                     .main__inner__chat__message_list__item {margin: 15px 0; position: relative;}
                         .main__inner__chat__message_list__item + .main__inner__chat__message_list__item {margin-top: 0px;}
                             .main__inner__chat__message_list__item__user-name {margin: 0 0 10px 0;}
-                            .main__inner__chat__message_list__item__user-message {border: 1px solid #9a9a9a; padding: 5px 9px; position: relative;}
+                            .main__inner__chat__message_list__item__user-message {border: 1px solid #9a9a9a; padding: 5px 9px; position: relative; word-wrap: break-word;}
                             .main__inner__chat__message_list__item__user-message.-rounded {-webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
                                 .main__inner__chat__message_list__item__user-message:before {}
                                     .main__inner__chat__message_list__item__user-message.-arrowed:before {content: ''; border: 10px solid transparent; border-bottom: 10px solid #9a9a9a; position: absolute; top: -20px; left: 9px;}
